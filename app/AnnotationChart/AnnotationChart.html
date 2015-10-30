@@ -1,0 +1,28 @@
+<Html>
+Annotation Chart
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <br>
+      <table class="table table-bordered table-striped">
+      <colgroup>
+          <col class="col-md-1">
+          <col class="col-md-2">
+        </colgroup>
+        <tbody>
+          <tr ng-repeat="row in chartObject.data.rows">
+           	<td><input type="text" ng-model="row.c[0].v"></td>
+           	
+	   		<td><input type="number" ng-model="row.c[1].v" class="ng-pristine ng-valid ng-touched"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<div google-chart chart="chartObject" style="height:600px; width:100%;"></div>
+
+</Html>
